@@ -1,0 +1,226 @@
+body {
+    text-align: center;
+    background-color: #283149;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #DBEDF3;
+    font-family: "Arvo", cursive;
+    text-shadow: 3px 0 #DA0463;
+}
+
+footer {
+    color: #DBEDF3;
+    font-family: "Arvo", cursive;
+    text-shadow: 1px 0 #DA0463;
+}
+
+.bats {
+    background-image: url("images/bats.jpg");
+}
+
+.cow {
+    background-image: url("images/cow.jpg");
+}
+
+.Coyote {
+    background-image: url("images/Coyote.jpg");
+}
+
+.dog {
+    background-image: url("images/dog.jpg");
+}
+
+.Dolphin {
+    background-image: url("images/Dolphin.jpg");
+}
+
+.Dove {
+    background-image: url("images/Dove.jpg");
+}
+
+.Duck {
+    background-image: url("images/Duck.jpg");
+    background-repeat: no-repeat;
+}
+
+.elk {
+    background-image: url("images/elk.jpg");
+}
+
+.Frog {
+    background-image: url("images/Frog.jpg");
+}
+
+.guinea-pig {
+    background-image: url("images/guinea-pig.jpg");
+}
+
+.horse {
+    background-image: url("images/horse.jpg");
+}
+
+.owl {
+    background-image: url("images/owl.jpg");
+}
+
+.pig {
+    background-image: url("images/Pig.jpg");
+}
+
+.robin-bird {
+    background-image: url("images/robin-bird.jpg");
+    background-repeat: no-repeat;
+}
+
+.rooster {
+    background-image: url("images/rooster.jpg");
+}
+
+.Seagull {
+    background-image: url("images/Seagull.jpg");
+}
+
+.Sheep {
+    background-image: url("images/Sheep.jpg");
+}
+
+.Squirrel {
+    background-image: url("images/Squirrel.jpg");
+}
+
+.Tiger {
+    background-image: url("images/Tiger.jpg");
+}
+
+.Turkey {
+    background-image: url("images/Turkey.jpg");
+}
+
+.set {
+    margin: 4% auto;
+}
+
+.game-over {
+    background-color: red;
+    opacity: 0.8;
+}
+
+.pressed {
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
+}
+
+.red {
+    color: red;
+}
+
+.animal {
+    outline: none;
+    border: 10px solid #404B69;
+    font-size: 0px;
+    font-family: 'Arvo', cursive;
+    line-height: 2;
+    font-weight: 900;
+    color: #DA0463;
+    text-shadow: 3px 0 #DBEDF3;
+    border-radius: 15px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+}
+
+.animal:hover {
+    box-shadow: 2px 3px 4px 2px white;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
+    .animal {
+        width: 140px;
+        height: 145px;
+        margin: 6px;
+    }
+}
+
+table {
+    width: 750px;
+    border-collapse: collapse;
+    margin: 50px auto;
+    color: white;
+    font-family: "Arvo", cursive;
+}
+
+th {
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+td,
+th {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 18px;
+}
+
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    table {
+        width: 100%;
+    }
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid #ccc;
+    }
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        /* Label the data */
+        content: attr(data-column);
+        color: #000;
+        font-weight: bold;
+    }
+}
